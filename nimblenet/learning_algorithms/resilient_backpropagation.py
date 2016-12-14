@@ -110,12 +110,12 @@ def resilient_backpropagation(network, trainingset, testset, cost_function, ERRO
         
         if epoch%print_rate==0:
             # Show the current training status
-            print "[training] Current error:", error, "\tEpoch:", epoch
+            print("[training] Current error:", error, "\tEpoch:", epoch)
 
-    print "[training] Finished:"
-    print "[training]   Converged to error bound (%.4g) with error %.4g." % ( ERROR_LIMIT, error )
-    print "[training]   Measured quality: %.4g" % network.measure_quality( training_data, training_targets, cost_function )
-    print "[training]   Trained for %d epochs." % epoch
+    print("[training] Finished:")
+    print("[training]   Converged to error bound (%.4g) with error %.4g." % ( ERROR_LIMIT, error ))
+    print("[training]   Measured quality: %.4g" % network.measure_quality( training_data, training_targets, cost_function ))
+    print("[training]   Trained for %d epochs." % epoch)
     
     if save_trained_network and confirm( promt = "Do you wish to store the trained network?" ):
         network.save_network_to_file()

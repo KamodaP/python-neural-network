@@ -97,15 +97,15 @@ def scaled_conjugate_gradient(network, trainingset, testset, cost_function, ERRO
             lamb        = 4 * lamb
     
         if k%print_rate==0:
-            print "[training] Current error:", f_new, "\tEpoch:", k
+            print("[training] Current error:", f_new, "\tEpoch:", k)
     #end
     
     network.set_weights( np.array(vector_new) )
     
-    print "[training] Finished:"
-    print "[training]   Converged to error bound (%.4g) with error %.4g." % ( ERROR_LIMIT, f_new )
-    print "[training]   Measured quality: %.4g" % network.measure_quality( training_data, training_targets, cost_function )
-    print "[training]   Trained for %d epochs." % k
+    print("[training] Finished:")
+    print("[training]   Converged to error bound (%.4g) with error %.4g." % ( ERROR_LIMIT, f_new ))
+    print("[training]   Measured quality: %.4g" % network.measure_quality( training_data, training_targets, cost_function ))
+    print("[training]   Trained for %d epochs." % k)
     
     
     if save_trained_network and confirm( promt = "Do you wish to store the trained network?" ):

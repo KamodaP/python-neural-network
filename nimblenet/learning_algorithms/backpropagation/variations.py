@@ -1,7 +1,7 @@
 import numpy as np
 import collections
 
-from base import backpropagation_foundation
+from .base import backpropagation_foundation
 
 
 default_configuration = {

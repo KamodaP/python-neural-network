@@ -38,12 +38,12 @@ def scipyoptimize(network, trainingset, testset, cost_function, method = "Newton
     
     
     if not results.success:
-        print "[training] WARNING:", results.message
-        print "[training]   Terminated with error %.4g." % results.fun
+        print("[training] WARNING:", results.message)
+        print("[training]   Terminated with error %.4g." % results.fun)
     else:
-        print "[training] Finished:"
-        print "[training]   Completed with error %.4g." % results.fun
-        print "[training]   Measured quality: %.4g" % network.measure_quality( training_data, training_targets, cost_function )
+        print("[training] Finished:")
+        print("[training]   Completed with error %.4g." % results.fun)
+        print("[training]   Measured quality: %.4g" % network.measure_quality( training_data, training_targets, cost_function ))
         
         if save_trained_network and confirm( promt = "Do you wish to store the trained network?" ):
             network.save_network_to_file()
